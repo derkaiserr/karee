@@ -1,0 +1,117 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e2f; /* Darker background */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  .container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .animated-text {
+    font-size: 3.5rem;
+    color: #ff66cc; /* Pink text */
+    animation: bounce 2s infinite;
+    margin: 0;
+  }
+  
+  .animated-subtext {
+    font-size: 1.5rem;
+    color: #f1c40f; /* Bright yellow subtext */
+    animation: fadeIn 3s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .confetti {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #ff66cc; /* Initial color */
+    animation: confetti-fall 6s infinite ease-in-out;
+    top: -10px;
+    border-radius: 50%; /* Rounded confetti */
+  }
+  
+  @keyframes confetti-fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(800px) rotate(720deg); /* Fall and rotate */
+      opacity: 0;
+    }
+  }
+  
+  /* Customize each confetti piece with different colors and positions */
+  .confetti:nth-child(1) {
+    left: 20%;
+    background-color: #ff66cc;
+    animation-delay: 0s;
+  }
+  .confetti:nth-child(2) {
+    left: 40%;
+    background-color: #ffdd57;
+    animation-delay: 1s;
+  }
+  .confetti:nth-child(3) {
+    left: 60%;
+    background-color: #42a5f5;
+    animation-delay: 2s;
+  }
+  .confetti:nth-child(4) {
+    left: 80%;
+    background-color: #ab47bc;
+    animation-delay: 0.5s;
+  }
+  .confetti:nth-child(5) {
+    left: 10%;
+    background-color: #66bb6a;
+    animation-delay: 1.5s;
+  }
+  .confetti:nth-child(6) {
+    left: 70%;
+    background-color: #ef5350;
+    animation-delay: 2.5s;
+  }
+  .confetti:nth-child(7) {
+    left: 30%;
+    background-color: #ffa726;
+    animation-delay: 3s;
+  }
+  .confetti:nth-child(8) {
+    left: 50%;
+    background-color: #26c6da;
+    animation-delay: 3.5s;
+  }
+  
